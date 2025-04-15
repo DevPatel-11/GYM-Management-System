@@ -131,14 +131,6 @@ $tables = [
       FOREIGN KEY (user_email) REFERENCES userstable(user_email) ON DELETE CASCADE
   )",
 
-  "CREATE TABLE IF NOT EXISTS plannermusclegroup (
-      planner_id INT(11) NOT NULL,
-      muscle_group ENUM('Chest','Legs','Arms','Core','Shoulder','Back') NOT NULL,
-      selected TINYINT(1) DEFAULT 1,
-      PRIMARY KEY (planner_id, muscle_group),
-      FOREIGN KEY (planner_id) REFERENCES workoutplanner(planner_id) ON DELETE CASCADE
-  )",
-
   "CREATE TABLE IF NOT EXISTS planned_exercises (
       plan_exercise_id INT AUTO_INCREMENT PRIMARY KEY,
       planner_id INT NOT NULL,

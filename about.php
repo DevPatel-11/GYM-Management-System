@@ -269,13 +269,13 @@ if ($logged_in) {
         <h2>Meet the Team (Just a few of us!)</h2>
         <div class="team-section">
             <div class="team-member">
-                <h3>Pushkar Rai</h3>
+                <h3>Kushagra Ambashta</h3>
             </div>
             <div class="team-member">
-                <h3>Praneet Sharma</h3>
+                <h3>Dev Patel</h3>
             </div>
             <div class="team-member">
-                <h3>Parth Dhande</h3>
+                <h3>Arnav Rohilla</h3>
             </div>
         </div>
 
