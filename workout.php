@@ -1151,6 +1151,7 @@ $conn->close();
 <header>
         <a href="./dashboard.php"><img src="assets/logo.png" alt="FitFlex Logo" class="logo"></a>
         <nav class="nav">
+            <a href="./askai.php"><button>Ask AI</button></a>
             <a href="./planner.php"><button>Planner</button></a>
             <a href="./workout.php"><button>Workouts</button></a>
             <a href="./dietpage.php"><button>Diets</button></a>
