@@ -1,13 +1,9 @@
 <?php
 session_start();
 
-// Simple check - replace with your actual login logic if more complex
 if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
-    // If you have a login page, redirect there. Otherwise, you might handle it differently.
-    // For this example, let's assume you want to allow access even without login
-    // for testing, but you would uncomment the header/exit in production.
-    // header("Location: login.html");
-    // exit();
+    header("Location: login.html");
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -287,8 +283,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
 
 
         async function generateAIResponse(text) {
-          // WARNING: Hardcoding API keys in client-side JS is highly insecure.
-          const apiKey = "AIzaSyDbGzHhMGvjMiWHgNGB-Hq3YST87mKovaU"; // Replace with YOUR key
+          const apiKey = "AIzaSyDbGzHhMGvjMiWHgNGB-Hq3YST87mKovaU"; 
           const model = "gemini-1.5-flash-latest";
           const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
@@ -369,9 +364,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
 
           } catch (error) {
               console.error("Error during AI response generation:", error);
-               // Update placeholder with error message, wrapped in <p>
                loadingMsgDiv.innerHTML = '<p>Sorry, something went wrong while getting the response.</p>';
-              // saveMessage("Sorry, something went wrong while getting the response.", "ai"); // Optional
           } finally {
              chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
           }
